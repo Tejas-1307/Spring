@@ -1,11 +1,13 @@
 package com.codekul.springCodekul.jpa.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
+@JsonIgnoreProperties("hibernateLazyInitializer")
 public class Student {
 
     @Id

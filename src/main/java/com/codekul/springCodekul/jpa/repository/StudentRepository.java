@@ -30,5 +30,9 @@ public interface StudentRepository extends JpaRepository<Student,Integer> {
 
     List<Student> findByAgeBetween(Integer startAge, Integer endAge);
 
+    List<Student> findByAgeLessThan(Integer age);
+
+    List<Student> findBydobBefore(LocalDate startDate);
+
 //
 }

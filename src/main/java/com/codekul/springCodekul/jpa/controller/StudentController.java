@@ -118,9 +118,19 @@ public class StudentController {
         return studentRepository.findBydobAfter(startDate);
     }
 
+    @GetMapping("getStudentDobBefore/{startDate}")
+    public List<Student> getStudentDobBefore(@PathVariable("startDate") LocalDate startDate){
+        return studentRepository.findBydobBefore(startDate);
+    }
+
     @GetMapping ("getStudentDobGreater/{age}")
     public List<Student> getStudentDobGreater(@PathVariable("age") Integer age){
         return studentRepository.findByAgeGreaterThan(age);
+    }
+
+    @GetMapping("getByLessAge/{age}")
+    public List<Student> getByLessAge(@PathVariable ("age") Integer age){
+        return studentRepository.findByAgeLessThan(age);
     }
 
     @GetMapping ("getStudentAgeBetween/{startAge}/{endAge}")

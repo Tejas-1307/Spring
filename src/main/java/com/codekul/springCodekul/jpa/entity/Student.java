@@ -17,7 +17,7 @@ public class Student {
 
     private  String address;
 
-    private  String MobileNumber;
+    private  String mobileNumber;
 
     private LocalDate dob;
 
@@ -64,10 +64,10 @@ public class Student {
     }
 
     public String getMobileNumber() {
-        return MobileNumber;
+        return mobileNumber;
     }
 
     public void setMobileNumber(String mobileNumber) {
-        MobileNumber = mobileNumber;
+        mobileNumber = mobileNumber;
     }
 }

@@ -1,10 +1,9 @@
 package com.codekul.springCodekul.jpa.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.time.LocalDate;
 
 @Entity
 @JsonIgnoreProperties("hibernateLazyInitializer")
@@ -19,6 +18,26 @@ public class Student {
     private  String address;
 
     private  String MobileNumber;
+
+    private LocalDate dob;
+
+    private Integer age;
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        age = age;
+    }
+
+    public LocalDate getDob() {
+        return dob;
+    }
+
+    public void setDob(LocalDate dob) {
+        dob = dob;
+    }
 
     public Integer getId() {
         return id;

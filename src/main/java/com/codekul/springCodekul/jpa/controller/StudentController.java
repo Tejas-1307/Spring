@@ -84,7 +84,7 @@ public class StudentController {
     @PostMapping("deleteByObject/{id}")
     public String deleteStudent(@RequestBody Student student){
         studentRepository.delete(student);
-        return "record deleted";
+        return "record Added";
     }
 
 //    @GetMapping("getByAddress/{address}/{name}")
@@ -137,6 +137,16 @@ public class StudentController {
     public List<Student> getStudentAgeBetween(@PathVariable("startAge") Integer startAge,
                                               @PathVariable("endAge") Integer endAge){
         return studentRepository.findByAgeBetween(startAge,endAge);
+    }
+
+    @GetMapping("getByNameNull")
+    public List<Student> getByNameNull(){
+        return studentRepository.findByNameNotNull();
+    }
+
+    @GetMapping("getByMobileNull")
+    public List<Student> getByMobileNull(){
+        return studentRepository.findByMobileNumberNotNull();
     }
 
 

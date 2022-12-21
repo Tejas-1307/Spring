@@ -34,5 +34,9 @@ public interface StudentRepository extends JpaRepository<Student,Integer> {
 
     List<Student> findBydobBefore(LocalDate startDate);
 
+    List<Student> findByNameNotNull();
+
+    List<Student> findByMobileNumberNotNull();
+
 //
 }

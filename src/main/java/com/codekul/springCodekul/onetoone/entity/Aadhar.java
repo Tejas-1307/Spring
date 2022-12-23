@@ -14,6 +14,20 @@ public class Aadhar {
 
     private String nationality;
 
+    //owning
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "person_id")
+    private Person person;
+
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
+    }
+
     public String getNationality() {
         return nationality;
     }
@@ -37,4 +51,5 @@ public class Aadhar {
     public void setAadharNumber(Long aadharNumber) {
         this.aadharNumber = aadharNumber;
     }
+
 }

@@ -15,10 +15,10 @@ public class AadharController {
     private AadharRepository aadharRepository;
 
 
-    @PostMapping("saveAadhar")
-    public String saveAadhar(@RequestBody Aadhar aadhar){
-        aadharRepository.save(aadhar);
-        return "record saved";
-    }
+//    @PostMapping("saveAadhar")
+//    public String saveAadhar(@RequestBody Aadhar aadhar){
+//        aadharRepository.save(aadhar);
+//        return "record saved";
+//    }
 
 }

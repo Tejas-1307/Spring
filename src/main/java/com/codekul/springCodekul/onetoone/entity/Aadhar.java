@@ -1,5 +1,6 @@
 package com.codekul.springCodekul.onetoone.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 @Entity
@@ -18,6 +19,7 @@ public class Aadhar {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "person_id")
+    @JsonBackReference
     private Person person;
 
     public Person getPerson() {

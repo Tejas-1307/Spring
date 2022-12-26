@@ -1,5 +1,6 @@
 package com.codekul.springCodekul.onetoone.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 @Entity
@@ -17,6 +18,7 @@ public class Person {
     //inverse
 
     @OneToOne( mappedBy = "person", cascade = CascadeType.ALL)
+    @JsonManagedReference
     private Aadhar aadhar;
 
     public Aadhar getAadhar() {

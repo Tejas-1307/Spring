@@ -11,10 +11,10 @@ public class CompanyImpl implements CompanyService{
     @Autowired
     private CompanyRepository companyRepository;
 
-
     @Override
     public String saveCompany(Company company) {
         companyRepository.save(company);
         return "saved company...";
     }
 }
+

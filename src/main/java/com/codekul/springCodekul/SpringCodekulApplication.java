@@ -1,8 +1,8 @@
 package com.codekul.springCodekul;
 
+import com.codekul.springCodekul.aop.BoysStudent;
+import com.codekul.springCodekul.apo2.GirlStudent;
 import com.codekul.springCodekul.di.Company;
-import com.codekul.springCodekul.ioc.Jio;
-import com.codekul.springCodekul.ioc.Vodafone;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -24,6 +24,11 @@ public class SpringCodekulApplication {
 
 		Company company = context.getBean(Company.class);
 		company.display();
+
+		BoysStudent boysStudent= context.getBean(BoysStudent.class);
+		GirlStudent girlStudent= context.getBean(GirlStudent.class);
+		boysStudent.study(1);
+		girlStudent.studied("Tejas","Salunkhe");
 	}
 
 	@GetMapping("hi")

@@ -20,8 +20,9 @@ public class Area {
     @Column(length = 7)
     private  String pinCode;
 
-    @ManyToOne
-    @JoinColumn(name = "City_id")
+    @ManyToOne(cascade = CascadeType.ALL)
     @JsonBackReference
     private City city;
+
+
 }

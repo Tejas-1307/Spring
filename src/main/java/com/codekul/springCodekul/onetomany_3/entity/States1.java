@@ -27,7 +27,8 @@ public class States1 {
     private String legend;
 
     @ManyToOne
-    @JoinColumn(name = "Country1_id")
+    @JoinColumn(name = "country_id")
     @JsonBackReference
     private Country1 country1;
+
 }

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SpringCodekulApplication {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		ConfigurableApplicationContext context = SpringApplication.run(SpringCodekulApplication.class, args);
 
 //		Vodafone obj =context.getBean(Vodafone.class);
@@ -27,8 +27,9 @@ public class SpringCodekulApplication {
 
 		BoysStudent boysStudent= context.getBean(BoysStudent.class);
 		GirlStudent girlStudent= context.getBean(GirlStudent.class);
-		boysStudent.study(1);
-		girlStudent.studied("Tejas","Salunkhe");
+		boysStudent.study(1);//join point
+		boysStudent.exc("throws exception");
+//		girlStudent.studied("Tejas","Salunkhe");
 	}
 
 	@GetMapping("hi")

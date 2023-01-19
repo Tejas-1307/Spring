@@ -6,6 +6,8 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
@@ -20,10 +22,11 @@ public class Taluka {
     @Column(length = 15)
     private String talukaName;
 
-    @ManyToOne
-    @JoinColumn(name = "District_id")
+
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "Taluka_id")
     @JsonBackReference
-    private District district;
+    private List<City> city;
 
 
 }

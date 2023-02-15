@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 public class Company {
     @Autowired
     private Employee employee;
+
     @Autowired
     private Employee employee1;
 

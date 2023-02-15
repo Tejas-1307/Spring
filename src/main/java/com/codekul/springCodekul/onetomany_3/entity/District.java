@@ -22,10 +22,9 @@ public class District {
     @Column(length = 10)
     private String districtName;
 
+    @ManyToOne
+    @JoinColumn(name = "states1_id")
+    private States1 states1;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "District_id")
-    @JsonBackReference
-    private List<Taluka> taluka;
 
 }

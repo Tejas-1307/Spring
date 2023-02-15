@@ -28,7 +28,6 @@ public class States1 {
 
     @ManyToOne
     @JoinColumn(name = "country_id")
-    @JsonBackReference
     private Country1 country1;
 
 }

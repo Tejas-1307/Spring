@@ -33,7 +33,7 @@ public class PersonController {
 //       aadhar.setPerson(person1);
 //       personRepository.save(person1);
 //       aadharRepository.save(aadhar);
-        personRepository.save(person);
+//        personRepository.save(person);
 
        return "person and aadhar saved";
     }
